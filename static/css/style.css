@@ -1,0 +1,213 @@
+/* -------------------- Animated Background -------------------- */
+body {
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Smooth gradient movement */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* -------------------- Body & Container -------------------- */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  text-align:center;
+  margin:0;
+  padding:20px;
+}
+
+.container{
+  background:rgba(0,0,0,0.55);
+  padding:70px;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(0,0,0,0.6);
+  max-width:800px;
+  margin:auto;
+}
+
+/* -------------------- Highlight Headings -------------------- */
+h1, h2{
+  color:#00d4ff;
+  text-shadow: 2px 2px 10px rgba(0,196,255,0.7);
+}
+h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:26px;
+  margin-bottom:40px;
+  color:#ccc;
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:22px 60px;
+  font-size:26px;
+  margin:20px;
+  border-radius:10px;
+  text-decoration:none;
+  background:#00b4db;
+  color:white;
+  transition:0.3s;
+  opacity:1;
+}
+.btn:hover{
+  background:#0083b0;
+  transform:scale(1.1);
+}
+
+/* -------------------- Attendance Form -------------------- */
+.form-box{
+  animation: slideIn 1s ease forwards;
+  opacity:1;
+  padding:40px;
+  background: rgba(0,0,0,0.6);
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(0,0,0,0.7);
+  width:350px;
+  margin:auto;
+  margin-top:50px;
+}
+input, select, button{
+  padding:15px;
+  margin:12px 0;
+  border-radius:8px;
+  border:none;
+  width:100%;
+  font-size:18px;
+}
+
+/* Submit Button */
+button{
+  padding:18px 50px;
+  margin-top:15px;
+  border-radius:8px;
+  font-size:20px;
+  cursor:pointer;
+  background: linear-gradient(90deg,#00c3ff,#0099cc);
+  border:none;
+  color:white;
+  transition:0.3s;
+}
+button:hover{
+  transform:scale(1.05);
+  background: linear-gradient(90deg,#0099cc,#00c3ff);
+}
+
+.back-btn{
+  background:white;
+  color:black;
+  padding:12px 25px;
+  font-size:18px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* -------------------- Report Table -------------------- */
+table{
+  margin:auto;
+  margin-top:30px;
+  border-collapse:collapse;
+  width:90%;
+}
+th,td{
+  padding:15px;
+  text-align:center;
+  border-bottom:1px solid #ccc;
+  color:white;
+}
+tr:nth-child(even){background:rgba(255,255,255,0.05);}
+tr.today{background:rgba(0,195,255,0.2);}
+
+/* -------------------- Animations -------------------- */
+
+/* Headings fade & slide */
+.animate-heading{
+  animation: fadeSlideDown 1s ease forwards;
+}
+.animate-subtitle{
+  animation: fadeSlideDown 1.3s ease forwards;
+}
+.animate-btn{
+  animation: fadeSlideUp 1.6s ease forwards;
+  animation-delay:1.2s;
+}
+
+/* Attendance form */
+.animate-form{
+  animation: slideIn 1s ease forwards;
+}
+
+/* Input animations for attendance page */
+input, select, button{
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+input:nth-of-type(1) { animation-delay:0.2s; }
+input:nth-of-type(2) { animation-delay:0.4s; }
+input:nth-of-type(3) { animation-delay:0.6s; }
+select:nth-of-type(1) { animation-delay:0.8s; }
+select:nth-of-type(2) { animation-delay:1s; }
+select:nth-of-type(3) { animation-delay:1.2s; }
+button { animation-delay:1.4s; }
+
+/* Continuous button glow & bounce */
+@keyframes buttonGlow{
+  0% { box-shadow: 0 0 5px #00b4db; transform: scale(1); }
+  50% { box-shadow: 0 0 20px #00b4db; transform: scale(1.05); }
+  100% { box-shadow: 0 0 5px #00b4db; transform: scale(1); }
+}
+.btn{
+  animation: buttonGlow 2.5s infinite ease-in-out;
+}
+
+/* Keyframes for sliding/fading */
+@keyframes fadeSlideDown{
+  0%{opacity:0; transform:translateY(-50px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+@keyframes fadeSlideUp{
+  0%{opacity:0; transform:translateY(30px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+@keyframes slideIn{
+  0%{opacity:0; transform:translateY(-50px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+/* -------------------- Mobile Responsive -------------------- */
+@media (max-width:768px){
+  .container{padding:40px;}
+  h1{font-size:38px;}
+  h2{font-size:28px;}
+  p{font-size:20px;}
+  .btn{font-size:22px; padding:18px 40px; margin:15px;}
+  .form-box{width:90%; padding:30px;}
+  input,select,button{font-size:18px;padding:12px;width:95%;}
+  .back-btn{font-size:16px;padding:10px 20px;}
+  table,th,td{font-size:14px;}
+}
+
+/* ================= PARTICLE NETWORK BACKGROUND ================= */
+
+#particles-js{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}

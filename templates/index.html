@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Attendance Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="home-page">
+
+<!-- PARTICLE NETWORK BACKGROUND -->
+<div id="particles-js"></div>
+
+<div class="container">
+  <h1 class="animate-heading">Welcome</h1>
+  <p class="animate-subtitle">Track student attendance quickly and easily</p>
+
+  <a href="/attendance" class="btn animate-btn">Mark Attendance</a>
+  <a href="/report" class="btn animate-btn">View Report</a>
+</div>
+
+<!-- Particles Library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

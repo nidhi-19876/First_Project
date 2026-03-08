@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mark Attendance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-box animate-form">
+<h2>Mark Student Attendance</h2>
+
+<form method="POST">
+<input type="text" name="name" placeholder="Student Name" required>
+
+<select name="year">
+<option>Select Year</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+
+<select name="semester">
+<option>Select Semester</option>
+<option>Semester 1</option>
+<option>Semester 2</option>
+<option>Semester 3</option>
+<option>Semester 4</option>
+<option>Semester 5</option>
+<option>Semester 6</option>
+<option>Semester 7</option>
+<option>Semester 8</option>
+</select>
+
+<select name="section">
+<option>Select Section</option>
+<option>A</option>
+<option>B</option>
+<option>C</option>
+</select>
+
+<button>Submit Attendance</button>
+</form>
+
+<a href="/" class="back-btn">⬅ Go Back</a>
+</div>
+
+</body>
+</html>
