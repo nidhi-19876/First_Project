@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# virtual environment
+venv/
+
+# Data files
+data/attendance.csv
+
+# OS files
+.DS_Store
+Thumbs.db

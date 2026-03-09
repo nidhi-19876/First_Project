@@ -188,6 +188,26 @@ button { animation-delay:1.4s; }
   100%{opacity:1; transform:translateY(0);}
 }
 
+/* flash messages */
+.flash-messages p {
+  background: rgba(0,0,0,0.7);
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px auto;
+  color: #fff;
+}
+
+/* clock display */
+.page-clock {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  color: #00d4ff;
+  font-size: 1rem;
+  z-index: 1000;
+}
+
 /* -------------------- Mobile Responsive -------------------- */
 @media (max-width:768px){
   .container{padding:40px;}
