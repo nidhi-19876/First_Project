@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Mark Attendance{% endblock %}
+{% block content %}
+<div class="form-box animate-form">
+<h2>Mark Student Attendance</h2>
+
+<form method="POST">
+<input type="text" name="name" placeholder="Student Name" required>
+
+<select name="year" required>
+<option value="">Select Year</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+
+<select name="semester" required>
+<option value="">Select Semester</option>
+<option>Semester 1</option>
+<option>Semester 2</option>
+<option>Semester 3</option>
+<option>Semester 4</option>
+<option>Semester 5</option>
+<option>Semester 6</option>
+<option>Semester 7</option>
+<option>Semester 8</option>
+</select>
+
+<select name="section" required>
+<option value="">Select Section</option>
+<option>A</option>
+<option>B</option>
+<option>C</option>
+</select>
+
+<button type="submit">Submit Attendance</button>
+</form>
+
+<a href="{{ url_for('index') }}" class="back-btn">⬅ Go Back</a>
+</div>
+{% endblock %}

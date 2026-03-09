@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Report - Student Attendance Tracker{% endblock %}
+
+{% block content %}
+<h2 style="text-align:center;">Attendance Report</h2>
+
+<form method="GET" style="text-align:center;">
+<input id="searchInput" type="text" name="search" placeholder="Search Student Name" value="{{ request.args.get('search','') }}">
+<button>Search</button>
+</form>
+
+<div style="text-align:center;margin-top:10px;">
+    <a href="{{ url_for('download') }}" class="btn">Download CSV</a>
+    <form action="{{ url_for('clear') }}" method="post" style="display:inline;" onsubmit="return confirm('Clear all records?');">
+        <button type="submit" class="btn">Clear All</button>
+    </form>
+</div>
+
+<table id="attendanceTable">
+<tr>
+<th>Name</th>
+<th>Year</th>
+<th>Semester</th>
+<th>Section</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+
+{% for row in data %}
+<tr class="{% if row[4]==today %}today{% endif %}">
+<td>{{row[0]}}</td>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+<td>{{row[5]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<div style="text-align:center;">
+<a href="{{ url_for('index') }}" class="back-btn">⬅ Go Back</a>
+</div>
+{% endblock %}
